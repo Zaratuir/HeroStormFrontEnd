@@ -1,0 +1,6 @@
+{
+    "APISite":"localhost",
+    "APIPort":"8080",
+    "APIProtocol":"http://",
+    "RefreshURL":"/Users/Refresh"
+}

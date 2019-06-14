@@ -5,9 +5,56 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #282c34;
+  color:white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#MainGrid{
+  display:-ms-grid;
+  display:grid;
+  grid-row-gap: 2vh;
+  grid-template-rows: 10vh 88vh;
+  grid-template-areas: "headerArea" "bodyArea";
+  min-height:100vh;
+}
+
+#header{
+  display:block;
+  grid-area:headerArea;
+}
+
+.App-header{
+  display:-ms-grid;
+  display:grid;
+  grid-column-gap: 2%;
+  grid-template-areas: "titleArea logoArea";
+}
+
+@media (min-aspect-ratio: 4/3){
+  .App-header{
+    grid-template-columns: 10% 88%;
+  }
+}
+@media (max-aspect-ratio: 4/3){
+  .App-header{
+    grid-template-columns: 49% 49%;
+  }
+}
+
+.App-title{
+  grid-area: titleArea;
+}
+
+.App-logo{
+  grid-area: logoArea;
+}
+
+#App-Body{
+  grid-area: bodyArea;
 }

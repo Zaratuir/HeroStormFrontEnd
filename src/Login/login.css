@@ -1,0 +1,48 @@
+#App-Body form{
+    display:grid;
+    grid-template-areas: "ErrorMessage ErrorMessage ErrorMessage"
+    "UsernameLabel UsernameInput UsernameInput"
+    "PasswordLabel PasswordInput DisplayPassword"
+    "Submit Submit Submit";
+    grid-row-gap: 2vh;
+    width:50vw;
+    margin:5vw 25vw;
+}
+
+#UsernameLabel{
+    grid-area: UsernameLabel;
+}
+
+#UsernameInput{
+    grid-area: UsernameInput;
+    max-width: 52%;
+}
+
+#PasswordLabel{
+    grid-area: PasswordLabel;
+}
+
+#PasswordInput{
+    grid-area: PasswordInput;
+    max-width: 100%;
+}
+
+#DisplayPasswordCheckbox{
+    grid-area: DisplayPassword;
+}
+
+#LoginButton{
+    grid-area: Submit;
+    max-width:30%;
+    margin: 0 35%;
+}
+
+#ErrorMessage{
+    grid-area: ErrorMessage;
+    background-color:rgba(255,0,0,.3);
+    border: solid red 2px;
+    border-radius: 5px;
+}
+#ErrorMessage.false{
+    display:none;
+}
